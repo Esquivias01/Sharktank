@@ -37,4 +37,4 @@ def submit():
         return render_template('SP.html',message=message)
     
 if __name__ == '__main__':
-    app.run(debug=False)
+    app.run(debug=True)
