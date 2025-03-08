@@ -43,7 +43,7 @@
 
       <section class="fot">
         <div class="fot2">
-            <h2>Sanación Personalizada</h2>
+            <p>Sanación Personalizada</p>
         </div>
       </section>
 
@@ -134,5 +134,23 @@
         <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a> y <a href="#">Twitter</a>.</p>
     </footer>
     <script src="{{ url_for('static', filename='bootstrap/bootstrap.bundle.min.js') }}"></script>
+
+    <script>// Guardar la posición de desplazamiento
+        window.addEventListener("beforeunload", function() {
+            // Guardamos la posición de scroll en el localStorage antes de recargar
+            localStorage.setItem("scrollPosition", window.scrollY);
+        });
+        
+        // Restaurar la posición de desplazamiento al recargar la página
+        window.addEventListener("load", function() {
+            // Verificamos si hay una posición guardada en localStorage
+            if (localStorage.getItem("scrollPosition")) {
+                // Restablecer la posición del scroll
+                window.scrollTo(0, localStorage.getItem("scrollPosition"));
+                // Limpiar el valor guardado para que no se quede almacenado
+                localStorage.removeItem("scrollPosition");
+            }
+        });
+        </script>
 </body>
 </html>
