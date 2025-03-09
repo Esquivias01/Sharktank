@@ -147,6 +147,24 @@
     }
 </script>
 
+<script>// Guardar la posición de desplazamiento
+    window.addEventListener("beforeunload", function() {
+        // Guardamos la posición de scroll en el localStorage antes de recargar
+        localStorage.setItem("scrollPosition", window.scrollY);
+    });
+    
+    // Restaurar la posición de desplazamiento al recargar la página
+    window.addEventListener("load", function() {
+        // Verificamos si hay una posición guardada en localStorage
+        if (localStorage.getItem("scrollPosition")) {
+            // Restablecer la posición del scroll
+            window.scrollTo(0, localStorage.getItem("scrollPosition"));
+            // Limpiar el valor guardado para que no se quede almacenado
+            localStorage.removeItem("scrollPosition");
+        }
+    });
+    </script>
+
 
 </body>
 </html>
