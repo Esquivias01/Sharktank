@@ -50,6 +50,8 @@ def send_orden():
         mensaje = request.form['mensaje']
         fecha = '8/3/2025'
         cantidad = request.form['cantidad']
+        nombre = request.form['nombre']
+        email = request.form['email']
 
         conn = sqlite3.connect('database.db')
         table_name = "pedidos"
@@ -57,8 +59,8 @@ def send_orden():
         c.execute(f"SELECT id FROM pedidos order by id desc limit 1")
         query = c.fetchall()
         id_ = query[0][0]+1
-        df = pd.DataFrame([[id_,intencion,color,aroma,mensaje,fecha,cantidad]],
-                          columns = ["id","intencion","color","aroma","mensaje","fecha","cantidad"])
+        df = pd.DataFrame([[id_,intencion,color,aroma,mensaje,fecha,cantidad,nombre,email]],
+                          columns = ["id","intencion","color","aroma","mensaje","fecha","cantidad","nombre","email"])
         print(df)
         df.to_sql(table_name, conn, if_exists='append', index=False)
         conn.close()
