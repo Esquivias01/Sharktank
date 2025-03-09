@@ -64,6 +64,38 @@
         <br>
         <br>
         <br>
+
+        <section id="veladoras-personalizadas">
+            <h2>Personaliza tu Veladora</h2>
+            <form action="http://127.0.0.1:5000/send_orden" method="post" class="p-4 border rounded shadow-sm bg-light">
+
+                <label for="intencion">Elige tu intención:</label>
+                <input type="text" id="intencion" name ="intencion" placeholder="Ejemplo: amor, tristeza, ..." required>
+
+                <label for="color">Color de la cera:</label>
+                <input type="text" id="color" name ="color" placeholder="Ejemplo: azul, rojo, ..." required>
+
+                <label for="aroma">Aroma:</label>
+                <input type="text" id="aroma" name ="aroma" placeholder="Ejemplo: azul, rojo, ..." required>
+
+
+                <label for="cantidad">Cantidad</label>
+                <input type="int" id="cantidad" name ="cantidad" placeholder="Ejemplo: azul, rojo, ..." required>
+
+        
+                <label for="mensaje">Mensaje personalizado:</label>
+                <input type="text" id="mensaje" name = "mensaje"  placeholder="Escribe un mensaje especial">
+        
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        
+        </section>
+
+        {% if message %}
+    <div class="alert alert-success text-center" role="alert" >
+        <p>{{ message }}</p>
+    </div>
+{% endif %}
             
          
       </main>
@@ -92,6 +124,28 @@
 
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
 
+<script>
+    function showPreview() {
+        // Obtener los valores del formulario
+        var intencion = document.getElementById("intencion").value;
+        var color = document.getElementById("color").value;
+        var aroma = document.getElementById("scent").value;
+        var message = document.getElementById("message").value;
+        var imageFile = document.getElementById("image").files[0];
+
+        // Cambiar la imagen de vista previa (aquí pondrías la lógica para la imagen personalizada)
+        var previewImage = document.getElementById("previewImage");
+        var imageUrl = URL.createObjectURL(imageFile); // Si se sube una imagen
+        if (imageFile) {
+            previewImage.src = imageUrl;
+        } else {
+            previewImage.src = "https://via.placeholder.com/200x400/" + color + "/000000?text=" + encodeURIComponent(message || "Tu Veladora");
+        }
+
+        // Cambiar otros detalles como el tamaño o el aroma (se puede hacer dinámicamente, dependiendo de tu diseño)
+        alert("Tamaño: " + size + "\nColor: " + color + "\nAroma: " + scent + "\nMensaje: " + message);
+    }
+</script>
 
 
 </body>
