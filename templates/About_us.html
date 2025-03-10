@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us|Chaman:Luz Secreta</title>
-    <link rel="stylesheet" href="/About us.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/About us.css') }}">
+
 </head>
 <body>
-    <div class="navbar">
-        <a href="/index.html">Inicio</a>
-        <a href="/VP.html">Veladoras Personalizadas</a>
-        <a href="/VS.html">Veladoras Sorpresa</a>
-        <a href="/SP.html">Sanación Personalizada</a>
-        <a href="/About us.html">Sobre Nosotros</a>
-
-      </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">Mi Sitio Web</a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
+                <a class="nav-link" href="{{ url_for('VP') }}">Veladoras Personalizadas</a>
+                <a class="nav-link" href="{{ url_for('VS') }}">Veladoras Sorpresa</a>
+                <a class="nav-link" href="{{ url_for('SP') }}">Sanación Personalizada</a>
+                <a class="nav-link" href="{{ url_for('About_us') }}">Sobre Nosotros</a>
+            </div>
+        </div>
+    </nav>
       <br>
       <br>
       <br>

@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veladoras|Personalizadas</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/VP.css') }}">
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='php/correo.php') }}">
+    
 </head>
 <body>
 
@@ -41,7 +42,7 @@
 
       <section class="fot">
         <div class="fot2">
-            <h2>Veladoras Personalizadas</h2>
+            <h3>Veladoras Personalizadas</h3>
         </div>
       </section>
 
@@ -56,6 +57,53 @@
                 ¡Personaliza tu mensaje oculto!
             </h3>
         </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <section id="veladoras-personalizadas">
+            <h2>Personaliza tu Veladora</h2>
+            <form action="http://127.0.0.1:5000/send_orden" method="post" class="p-4 border rounded shadow-sm bg-light">
+
+                <label for="intencion">Elige tu intención:</label>
+                <input type="text" id="intencion" name ="intencion" placeholder="Ejemplo: amor, tristeza, ..." required>
+
+                <label for="color">Color de la cera:</label>
+                <input type="text" id="color" name ="color" placeholder="Ejemplo: azul, rojo, ..." required>
+
+                <label for="aroma">Aroma:</label>
+                <input type="text" id="aroma" name ="aroma" placeholder="Ejemplo: azul, rojo, ..." required>
+
+
+                <label for="cantidad">Cantidad</label>
+                <input type="int" id="cantidad" name ="cantidad" placeholder="Ejemplo: azul, rojo, ..." required>
+
+        
+                <label for="mensaje">Mensaje personalizado:</label>
+                <input type="text" id="mensaje" name = "mensaje"  placeholder="Escribe un mensaje especial">
+
+                <label for="nombre">Coloca tu nombre </label>
+                <input type="text" id="nombre" name = "nombre"  placeholder="Nombre">
+
+                <label for="email">Coloca tu email</label>
+                <input type="text" id="email" name = "email"  placeholder="Email">
+        
+                <button type="submit">Enviar Pedido</button>
+            </form>
+        
+        </section>
+
+        {% if message %}
+    <div class="alert alert-success text-center" role="alert" >
+        <p>{{ message }}</p>
+    </div>
+{% endif %}
+            
+         
       </main>
 
 
@@ -73,5 +121,56 @@
         <p>&copy; 2025 Chaman: Luz Secreta. Todos los derechos reservados.</p>
         <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a> y <a href="#">Twitter</a>.</p>
     </footer>
+
+
+    
+
+
+    
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+
+<script>
+    function showPreview() {
+        // Obtener los valores del formulario
+        var intencion = document.getElementById("intencion").value;
+        var color = document.getElementById("color").value;
+        var aroma = document.getElementById("scent").value;
+        var message = document.getElementById("message").value;
+        var imageFile = document.getElementById("image").files[0];
+
+        // Cambiar la imagen de vista previa (aquí pondrías la lógica para la imagen personalizada)
+        var previewImage = document.getElementById("previewImage");
+        var imageUrl = URL.createObjectURL(imageFile); // Si se sube una imagen
+        if (imageFile) {
+            previewImage.src = imageUrl;
+        } else {
+            previewImage.src = "https://via.placeholder.com/200x400/" + color + "/000000?text=" + encodeURIComponent(message || "Tu Veladora");
+        }
+
+        // Cambiar otros detalles como el tamaño o el aroma (se puede hacer dinámicamente, dependiendo de tu diseño)
+        alert("Tamaño: " + size + "\nColor: " + color + "\nAroma: " + scent + "\nMensaje: " + message);
+    }
+</script>
+
+<script>// Guardar la posición de desplazamiento
+    window.addEventListener("beforeunload", function() {
+        // Guardamos la posición de scroll en el localStorage antes de recargar
+        localStorage.setItem("scrollPosition", window.scrollY);
+    });
+    
+    // Restaurar la posición de desplazamiento al recargar la página
+    window.addEventListener("load", function() {
+        // Verificamos si hay una posición guardada en localStorage
+        if (localStorage.getItem("scrollPosition")) {
+            // Restablecer la posición del scroll
+            window.scrollTo(0, localStorage.getItem("scrollPosition"));
+            // Limpiar el valor guardado para que no se quede almacenado
+            localStorage.removeItem("scrollPosition");
+        }
+    });
+    </script>
+
+
 </body>
 </html>
