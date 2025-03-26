@@ -7,11 +7,15 @@
     border: none;
   }
           
-          .root{
-              --primary: #165131;
-              --secondary: #F2A512;
-              --tercero: #FEEEDF;
-          }
+  .root{
+    --primary: #1C1B1A;
+    --secondary: #D4A373;
+    --tercero: #F2C14E;
+      --tercero: #F4F1DE;
+      --tercero: #6B4C7D;
+      --tercero: #165131 ;
+      
+}
 
            /***************Header********************/
         .container1{
@@ -43,7 +47,7 @@
     /**********************NAV************************/
 
     .navbar {
-        background-color: #333;
+        background-color: #1C1B1A;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -66,8 +70,8 @@
   
       /* Efecto hover */
       .navbar a:hover {
-        color: #FEEEDF;
-        background-color: rgb(22, 81, 49);
+        color: #1C1B1A;
+        background-color: #F2C14E;
         border-radius: 5px;
       }
   
@@ -92,7 +96,7 @@
         text-align: center;
         justify-content: center;
         align-items: center;
-        color: #FEEEDF;
+        color: #D4A373;
         font-size: 4rem;
         background-color: rgb(0 0 0 / 80%);
     }
@@ -103,6 +107,7 @@
         text-align: center;
         align-items: center;
         font-size: xx-large;
+        color: #6B4C7D;
     }
 
 
@@ -129,6 +134,7 @@
         color: white;
         text-align: center;
         padding: 20px;
+        height: 100%;
     }
     footer a {
         color: #ffa500;

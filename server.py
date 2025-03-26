@@ -69,4 +69,4 @@ def send_orden():
         return render_template('VP.html',message=message)
     
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

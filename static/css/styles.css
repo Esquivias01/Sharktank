@@ -8,9 +8,11 @@
 }
         
         .root{
-            --primary: #165131;
-            --secondary: #F2A512;
-            --tercero: #FEEEDF;
+            --primary: #1C1B1A;
+            --secondary: #D4A373;
+            --tercero: #F2C14E;
+              --tercero: #F4F1DE;
+              --tercero: #6B4C7D;
         }
         
         
@@ -52,7 +54,7 @@
     /**********************NAV************************/
 
     .navbar {
-        background-color: #333;
+        background-color: #1C1B1A;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -69,14 +71,18 @@
         text-decoration: none;
         padding: 10px 20px;
         font-size: 16px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
         font-family: Arial, sans-serif;
         transition: color 0.3s ease, background-color 0.3s ease;
       }
   
       /* Efecto hover */
       .navbar a:hover {
-        color: #FEEEDF;
-        background-color: rgb(22, 81, 49);
+        color: #1C1B1A;
+        background-color: #F2C14E;
         border-radius: 5px;
       }
   
@@ -147,11 +153,11 @@
   }
 */
 
-.line2 h3,p{
+.line2 h3{
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   justify-content: center;
-  
+  color: #6B4C7D;
 
 
 }
@@ -172,7 +178,7 @@ section {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background:#FEEEDF;
+  background: #F4F1DE;
 }
 
 .card1 {
@@ -210,7 +216,7 @@ section {
 
         
         footer {
-            background-color:#165131 ;
+            background-color:#1C1B1A ;
             color: white;
             text-align: center;
             padding: 20px;
