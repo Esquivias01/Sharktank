@@ -163,10 +163,42 @@ header .navbar{
 
  }
 
-.hero-section .hero-image-wrapper{
-    max-width: 500px;
-    margin-right: 30px;
+.carrusel{
+    overflow: hidden;
+    width: 1000px;
+    background-color: #1C1B1A;
+    padding: 30px 0;
+    margin-top: 60px;
+    border-radius: 5px;
+    box-shadow: 20px 35px 35px rgba(0, 0, 0, 0.5);
+
 }
+
+.image-container{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 250px;
+    justify-items: stretch;
+    animation: animation 12s linear infinite;
+
+}
+
+.image-container img{
+    width: 200px;
+    height: 270px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid  #D4A373;
+    
+}
+
+@keyframes animation{
+    to{
+        translate: calc(-4*250px)
+    }
+}
+
+
 
 
   /*FOOTER*/
@@ -241,6 +273,10 @@ color: #F4F1DE;
        font-size: medium;
 
     
+    }
+
+    .carrusel{
+        width: 900px;
     }
     
 }

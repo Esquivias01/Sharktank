@@ -4,40 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veladoras|Sorpresas</title>
+    <link rel="icon" type="image/png" href="../static/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/VS.css') }}">
 </head>
 <body>
 
    
-    <br>
-    <br>
-    <br>
-    <br>
     
-    
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <div class="navbar-nav">
-                <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
-                <a class="nav-link" href="{{ url_for('VP') }}">Veladoras Personalizadas</a>
-                <a class="nav-link" href="{{ url_for('VS') }}">Veladoras Sorpresa</a>
-                <a class="nav-link" href="{{ url_for('SP') }}">Sanación Personalizada</a>
-                <a class="nav-link" href="{{ url_for('About_us') }}">Sobre Nosotros</a>
-            </div>
-        </div>
-    </nav>
+    <header>
+        <nav class="navbar section-content">
+            <a href="" class="nav-logo">
+                <h2 class="logo-text">Chamán:Luz Secreta
+                </h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times">
 
-
-      <section class="fot">
-        <div class="fot2">
-            <h3>Veladoras Sorpresa</h3>
-        </div>
-      </section>
-
-      <br>
-      <br>
-      <br>
-      <br>
+                </button>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('VP') }}">Veladoras Personalizadas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('VS') }}">Veladoras Sorpresa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('SP') }}">Sanación Personalizada</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('About_us') }}">Sobre Nosotros</a>
+                </li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars">
+                    
+            </button>
+        </nav>
+    </header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
       <main>
         <section  class="vp">
@@ -57,10 +68,29 @@
 
 
 
-      
+
+
+
+
       <footer>
         <p>&copy; 2025 Chaman: Luz Secreta. Todos los derechos reservados.</p>
-        <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a> y <a href="#">Twitter</a>.</p>
+        <p>Síguenos en <a href="#">Facebook</a> e <a href="https://www.instagram.com/chaman_veladoras?igsh=MW54ZnB0djBoY2dyZQ%3D%3D&utm_source=qr" target="_blank">Instagram</a> </p>
     </footer>
+
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuOpenButton = document.querySelector("#menu-open-button");
+            const menuCloseButton = document.querySelector("#menu-close-button");
+    
+            if (menuOpenButton && menuCloseButton) {  // Verifica que los botones existan antes de agregar eventos
+                menuOpenButton.addEventListener("click", () => {
+                    document.body.classList.toggle('show-mobile-menu');
+                });
+    
+                menuCloseButton.addEventListener("click", () => menuOpenButton.click());
+            }
+        });
+    </script>
 </body>
 </html>

@@ -30,6 +30,13 @@
           "backdrop-filter"
         ]
       }
-    ]
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "list": "off"
+      }
+    ],
+    "disown-opener": "off"
   }
 }

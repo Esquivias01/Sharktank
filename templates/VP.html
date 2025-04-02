@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veladoras|Personalizadas</title>
+    <link rel="icon" type="image/png" href="../static/img/logo.png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/VP.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='php/correo.php') }}">
     
 </head>
@@ -111,7 +113,7 @@
       
       <footer>
         <p>&copy; 2025 Chaman: Luz Secreta. Todos los derechos reservados.</p>
-        <p>Síguenos en <a href="#">Facebook</a>, <a href="#">Instagram</a> y <a href="#">Twitter</a>.</p>
+        <p>Síguenos en <a href="#">Facebook</a> e <a href="https://www.instagram.com/chaman_veladoras?igsh=MW54ZnB0djBoY2dyZQ%3D%3D&utm_source=qr" target="_blank">Instagram</a> </p>
     </footer>
 
 
@@ -162,6 +164,17 @@
         }
     });
     </script>
+
+<script>
+    const menuOpenButton = document.querySelector("#menu-open-button");
+    const menuCloseButton = document.querySelector("#menu-close-button")
+
+    menuOpenButton.addEventListener("click", () =>{
+        document.body.classList.toggle('show-mobile-menu');
+    })
+
+    menuCloseButton.addEventListener("click" , () => menuOpenButton.click());
+</script>
 
 
 </body>
