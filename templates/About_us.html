@@ -2,27 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>About Us|Chaman:Luz Secreta</title>
+    <link rel="icon" type="image/png" href="../static/img/logo.png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/About us.css') }}">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url_for('index') }}">Mi Sitio Web</a>
-            <div class="navbar-nav">
-                <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
-                <a class="nav-link" href="{{ url_for('VP') }}">Veladoras Personalizadas</a>
-                <a class="nav-link" href="{{ url_for('VS') }}">Veladoras Sorpresa</a>
-                <a class="nav-link" href="{{ url_for('SP') }}">Sanación Personalizada</a>
-                <a class="nav-link" href="{{ url_for('About_us') }}">Sobre Nosotros</a>
-            </div>
-        </div>
-    </nav>
-      <br>
-      <br>
-      <br>
+    <header>
+        <nav class="navbar section-content">
+            <a href="" class="nav-logo">
+                <h2 class="logo-text">Chamán:Luz Secreta
+                </h2>
+            </a>
+            <ul class="nav-menu">
+                <button id="menu-close-button" class="fas fa-times">
+
+                </button>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('index') }}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('VP') }}">Veladoras Personalizadas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('VS') }}">Veladoras Sorpresa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('SP') }}">Sanación Personalizada</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url_for('About_us') }}">Sobre Nosotros</a>
+                </li>
+            </ul>
+            <button id="menu-open-button" class="fas fa-bars">
+                    
+            </button>
+        </nav>
+    </header>
+
+
+
+
+
 
 
       <section class="fot">
@@ -46,45 +68,51 @@
       <main class="section-inner">
         <section class="section" id="nosotros">
            
-            <p>En Chaman: Luz Secreta, nos inspiramos en la conexión espiritual y la tradición. Cada veladora está diseñada con amor y cuidado para ofrecerte momentos de paz y claridad.Creemos en el poder transformador de la energía positiva y la espiritualidad,nuestras veladoras son más que simples fuentes de luz: son un puente entre tus intenciones y el universo. Cada una de ellas está elaborada con ingredientes cuidadosamente seleccionados y energizadas con mensajes sorpresa que emergen al derretirse, recordándote que siempre hay una luz incluso en los momentos más oscuros.</p>
-            <img src="/img/img4.jpg" alt="Historia de Chaman" style="width: 100%; max-width: 600px;">
+            <p>En Chaman: Luz Secreta, nos inspiramos en la conexión espiritual y la tradición. Cada veladora está diseñada con amor y cuidado para ofrecerte momentos de paz y claridad. Creemos en el poder transformador de la energía positiva y la espiritualidad,nuestras veladoras son más que simples fuentes de luz: son un puente entre tus intenciones y el universo. Cada una de ellas está elaborada con ingredientes cuidadosamente seleccionados y energizadas con mensajes sorpresa que emergen al derretirse, recordándote que siempre hay una luz incluso en los momentos más oscuros.</p>
+            <img src="{{ url_for('static', filename='img/img4.jpg') }}" alt="Historia de Chaman">
+
             <br>
             <br>
             <br>
 
             <div class="section">
-                <h2>Mision, Vision y Valores</h2>
+                <h2>Misión, Visión y Valores</h2>
                 <br>
                 <br>
                 <div class="cards1">
                     <div class="mycard">
                         <div class="cimg">
-                            <img  src="/img/img6.png" alt="">
+                            <img style="width: 100%;"  src="../static/img/mision.png" alt="">
                             
                         </div>
                         <div class="cdetail">
-                            <h2>Mision</h2>
-                            <p>Proporcionar veladoras únicas que armonicen el cuerpo, la mente y el espíritu, inspirando esperanza y bienestar en cada hogar.</p>
+                            <h2>Misión</h2>
+                            <p>Proporcionar bienestar y conexion espiritual a través de veladoras que al derretirse revelen mensajes ocultos, brindando luz, inspiracion y sanación a cada persona.</p>
     
                         </div>
                     </div>
                     <div class="mycard">
                         <div class="cimg">
-                            <img src="/img/img7.png" alt="">
+                            <img style="width: 100%;" src="../static/img/vision.png" alt="">
                         </div>
                         <div class="cdetail">
-                            <h2>Vision</h2>
-                            <p>Convertirnos en líderes del mercado de veladoras espirituales, siendo reconocidos por nuestra calidad, originalidad y compromiso con la sanación emocional y energética de nuestros clientes.</p>
+                            <h2>Visión</h2>
+                            <p>Ser la marca líder en veladoras místicas y personalizadas, reconocida por su innovación, calidad y capacidad de transmitir mensajes de luz y transformación.<p>
     
                         </div>
                     </div>
                     <div class="mycard">
                         <div class="cimg">
-                            <img src="/img/img8.png" alt="">
+                            <img style="width: 100%;" src="../static/img/values.png" alt="">
                         </div>
                         <div class="cdetail">
                             <h2>Valores</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accus</p>
+                            <p>Innovación - Fusionamos luz y mensaje en un solo producto. <br>
+                               Espiritualidad - Nustras veladoras están cargadas de intención y significado. <br>
+                               Calidad - Usamos materiales naturales y procesos cuidadosos. <br>
+                               Personalización - Cada veladora es única y hecha a medida. <br>
+                               Sostenibilidad - Compromiso con el medio ambiente y el bienestar colectivo. 
+                            </p>
     
                         </div>
                     </div>
@@ -98,5 +126,39 @@
     </main>
     
        
+
+   
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+    <footer>
+        <p>&copy; 2025 Chaman: Luz Secreta. Todos los derechos reservados.</p>
+        <p>Síguenos en <a href="#">Facebook</a> e <a href="https://www.instagram.com/chaman_veladoras?igsh=MW54ZnB0djBoY2dyZQ%3D%3D&utm_source=qr" target="_blank">Instagram</a> </p>
+    </footer>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const menuOpenButton = document.querySelector("#menu-open-button");
+            const menuCloseButton = document.querySelector("#menu-close-button");
+    
+            if (menuOpenButton && menuCloseButton) {  // Verifica que los botones existan antes de agregar eventos
+                menuOpenButton.addEventListener("click", () => {
+                    document.body.classList.toggle('show-mobile-menu');
+                });
+    
+                menuCloseButton.addEventListener("click", () => menuOpenButton.click());
+            }
+        });
+    </script>
 </body>
 </html>
