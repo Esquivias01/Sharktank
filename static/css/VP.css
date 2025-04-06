@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
           
-  .root{
+:root{
     --primary: #1C1B1A;
     --secondary: #D4A373;
-    --tercero: #F2C14E;
-    --tercero: #21CE94;
-      --tercero: #F4F1DE;
-      --tercero: #772198;
-      --tercero: #165131 ;
-      
+    --tercero1: #F2C14E;
+      --cuarto: #F4F1DE;
+      --quinto: #6B4C7D;
+      --sexto: #165131;
 }
 
 
@@ -17,7 +15,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Popins", sans-serif;
+    font-family: "Poppins", sans-serif;
 
 }
 
@@ -25,6 +23,23 @@ body{
    background: url(../img/img9.jpg);
    background-size: cover;
    background-repeat: no-repeat;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    background: var(--primary);
+    color: var(--cuarto);
+    text-align: center;
+    padding: 10px;
 }
 
 
@@ -36,7 +51,7 @@ ul{
 
 a{
     text-decoration: none;
-    color: #F4F1DE;
+    color: var(--cuarto);
 }
 
 button{
@@ -60,7 +75,7 @@ header{
     position: fixed;
     width: 100%;
     z-index: 5;
-    background-color: #1C1B1A;
+    background-color: var(--primary);
     
 }
 
@@ -72,7 +87,7 @@ header .navbar{
 }
 
 .navbar .nav-logo .logo-text{
-    color: #F4F1DE;
+    color: var(--cuarto);
     font-size: x-large;
     font-weight: 700;
 
@@ -85,15 +100,15 @@ header .navbar{
 
 .navbar .nav-menu .nav-link{
     padding: 10px 18px;
-    color: #1C1B1A;
-    background: #F2C14E;
+    color: var(--primary);
+    background: var(--tercero1);
     border-radius: 5px;
     transition: 0.3s ease;
 }
 
 .navbar .nav-menu .nav-link:hover{
-    color: #165131;
-    background: #F4F1DE;
+    color: var(--sexto);
+    background: var(--cuarto);
 
 }
 
@@ -141,7 +156,8 @@ header .navbar{
     margin-bottom: 0;
     margin-left: 2rem;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: var(--cuarto);
+    margin-bottom: 30px;
 }
 
 
@@ -149,11 +165,9 @@ header .navbar{
 .vp h3{
     text-align: center;
     align-items: center;
-    color:#165131 ;
+    color:var(--sexto) ;
     font-size: xx-large;
 }
-
-
 
 
 
@@ -169,7 +183,7 @@ header .navbar{
 .menu label{
     display:block ;
     padding: 5px;
-    color: #ffa500;
+    color: var(--tercero1);
     
 }
 
@@ -185,12 +199,12 @@ header .navbar{
     height: 50px;
     border-radius: 3px;
     margin-bottom: 10px;
-    color: #1C1B1A;
-    background-color: #F2C14E;
+    color: var(--primary);
+    background-color: var(--tercero1);
 }
 
 .menu form{
-    background-color:#F4F1DE;
+    background-color:var(--cuarto);
     border-radius: 5px;
 }
 
@@ -198,16 +212,39 @@ header .navbar{
 
 
        
-    footer {
-        background-color:#1C1B1A ;
-        color: white;
-        text-align: center;
-        padding: 20px;
-    }
-    footer a {
-        color: #ffa500;
-        text-decoration: none;
-    }
+   /*FOOTER*/
+  footer {
+    background: linear-gradient(to right, #1C1B1A, #165131);
+    color: var(--cuarto);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: var(--tercero1);
+    font-size: 24px;
+    transition: 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary);
+}
+
 
 
 
@@ -238,7 +275,7 @@ header .navbar{
     }
 
     .navbar #menu-open-button{
-color: #F4F1DE;
+color: var(--cuarto);
 
     }
   
@@ -254,7 +291,7 @@ color: #F4F1DE;
        flex-direction: column;
        align-items: center;
        padding-top: 100px;
-       background: #F4F1DE ;
+       background: var(--cuarto) ;
 
    
    }
@@ -264,7 +301,7 @@ color: #F4F1DE;
    }
 
    .navbar .nav-menu .nav-link {
-       color: #1C1B1A;
+       color: var(--primary);
        display: block;
        margin-top: 17px ;
 
@@ -273,4 +310,60 @@ color: #F4F1DE;
    
    }
    
+}
+
+@media screen and(min-width: 768px){
+
+    .sombra{
+        -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+       -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+       box-shadow: 0px 5px 15px 0px rgba(112,112,112,1.5);
+       
+       
+       background-color: var(--primary);
+       border-radius: 2rem;
+       padding: 2rem ;
+       height: 20rem;
+       }
+
+    .contenedor{
+        max-width: 90rem;
+        margin-top: 0;
+        margin-right: 2rem;
+        margin-bottom: 0;
+        margin-left: 2rem;
+        margin: 0 auto;
+        background-color: var(--cuarto);
+        margin-bottom: 30px;
+    }
+
+}
+
+
+
+@media screen and(max-width: 1440px){
+    .sombra{
+        -webkit-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+       -moz-box-shadow: 0px 5px 15px 0px rgba(112,112,112,0.54);
+       box-shadow: 0px 5px 15px 0px rgba(112,112,112,1.5);
+       
+       
+       background-color: var(--primary);
+       border-radius: 2rem;
+       padding: 2rem ;
+       height: 20rem;
+       }
+   
+   
+   
+    .contenedor{
+        max-width: 90rem;
+        margin-top: 0;
+        margin-right: 2rem;
+        margin-bottom: 0;
+        margin-left: 2rem;
+        margin: 0 auto;
+        background-color: var(--cuarto);
+        margin-bottom: 30px;
+    }
 }

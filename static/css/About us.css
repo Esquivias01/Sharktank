@@ -26,6 +26,7 @@ body{
   width: 100%;
   height: 100%;
   background-color: #F4F1DE;
+  padding-top: 120px;
 }
 
 
@@ -48,17 +49,13 @@ button{
 }
 
 
-.section-content{
-    margin: 0 auto;
-    padding: 0 20px;
-    
-}
 
 /*NAVBAR STYLING*/
 header{
     position: fixed;
+    top: 0;
     width: 100%;
-    z-index: 5;
+    z-index: 1000;
     background-color: #1C1B1A;
     
 }
@@ -108,7 +105,10 @@ header .navbar{
         background-image: url(../img/img4.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
       }
+      
        .fot2{
         width: 100%;
         height: 375px;
@@ -122,10 +122,20 @@ header .navbar{
 
        }
 
+       .section {
+        margin-bottom: 50px;
+    }
+
+    .section-content{
+        margin: 0 auto;
+        padding: 0 20px;
+        
+    }
+
        /*******************MAIN************/
        main{
         width: 100%;
-        margin-top: -100px;
+        margin-top: 0;
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -170,10 +180,12 @@ header .navbar{
         flex-direction: column;
         box-shadow:  0 3px 50px rgba(0,0,0,0.5);
         transition: 0.4s ease-in-out;
+        overflow: hidden;
     }
 
     .cards1 .mycard:hover{
         height: 35rem;
+        max-height: 400px; /* Expansión controlada */
     }
 
     .cards1 .mycard .cimg{
@@ -211,9 +223,6 @@ header .navbar{
         margin-top: -50px;
     }
 
-       
-     
-
 
 
 
@@ -232,12 +241,30 @@ header .navbar{
 
 
     /*MEDIA QUERY*/
-    @media screen and (min-width:320px){
+    @media screen and (max-width:320px){
       .hero-image{
         width: 500px;
         height: 400px;
       }
+
+      .cards1{
+        display: block;
+      }
+
     }
+
+    @media screen and (max-width:768px){
+  
+        .cards1 {
+            width: 100%;
+            padding: 10px;
+        }
+    
+        .cards1 .mycard {
+            width: 45%; /* Deja un 5% de espacio entre las cards */
+            margin: 10px;
+        }
+      }
 
 
 
@@ -307,5 +334,19 @@ header .navbar{
   
      
      }
+
+    
      
   }
+
+  @media screen and (max-width: 1440px) {
+    .cards1 {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .cards1 .mycard {
+        width: 30%; /* 3 cards por fila */
+        margin: 10px;
+    }
+}
