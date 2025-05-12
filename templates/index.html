@@ -55,12 +55,12 @@
                 </h2>
                 <h3>¿Eres nuevo comprando veladoras?</h3>
             <p class="description">
-              En Chamán:Luz Secreta nos enorgullece  ofrecer veladoras de la mas alta calidad y una linda experiencia. Nuestro compromiso  con la calidad, la excelencia y la experencia es primordial para nosotrso. Únete a nuestra comunidad  y descubre cómo nuestros productos pueden enriquecer tu vida, brindándote un camino hacia el bienestar. 
+              En Chamán:Luz Secreta nos enorgullece  ofrecer veladoras de la más alta calidad y una linda experiencia. Nuestro compromiso  con la calidad, la excelencia y la experiencia es primordial para nosotros. Únete a nuestra comunidad  y descubre cómo nuestros productos pueden enriquecer tu vida, brindándote un camino hacia el bienestar. 
             </p>
 
             <div class="buttons">
-                <a href="" class="button order-now">Order Now</a>
-                <a href="" class="button contact-us">Contact us</a>
+                <a href="" class="button order-now">¡No esperes más!</a>
+                <a href="" class="button contact-us">Contáctanos</a>
             </div>
             </div>
           
@@ -85,16 +85,26 @@
 
 
     <footer>
-        <p>&copy; 2025 Chaman: Luz Secreta. Todos los derechos reservados.</p>
-        <p>Síguenos en <a href="#">Facebook</a> e <a href="https://www.instagram.com/chaman_veladoras?igsh=MW54ZnB0djBoY2dyZQ%3D%3D&utm_source=qr" target="_blank">Instagram</a> </p>
+        <div class="footer-container">
+            <p>&copy; 2025 Chamán: Luz Secreta. Todos los derechos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.facebook.com/share/16Hm4Ncyon/" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/chaman_veladoras" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
     </footer>
-
 
 
 
     <script>
         const menuOpenButton = document.querySelector("#menu-open-button");
         const menuCloseButton = document.querySelector("#menu-close-button")
+        const navMenu = document.querySelector(".nav-menu");
+
 
         menuOpenButton.addEventListener("click", () =>{
             document.body.classList.toggle('show-mobile-menu');
