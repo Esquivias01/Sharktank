@@ -2,31 +2,32 @@ import pandas as pd
 import sqlite3
 
 # Nombre del archivo Excel y la hoja a leer
-excel_file = 'pedido.csv'
-#sheet_name = 'Hoja1'  # Cambia si tu hoja tiene otro nombre
+# excel_file = 'pedido.csv'
+# #sheet_name = 'Hoja1'  # Cambia si tu hoja tiene otro nombre
 
-df = pd.read_csv(excel_file)
+# df = pd.read_csv(excel_file)
 
-sqlite_db = 'database.db'
-table_name = 'pedidos'
+# sqlite_db = 'database.db'
+# table_name = 'pedidos'
 
-conn = sqlite3.connect(sqlite_db)
-cursor = conn.cursor()
+# conn = sqlite3.connect(sqlite_db)
+# cursor = conn.cursor()
 
-df.to_sql(table_name, conn, if_exists='replace', index=False)
+# df.to_sql(table_name, conn, if_exists='replace', index=False)
 
-conn.commit()
-conn.close()
+# conn.commit()
+# conn.close()
 
-print(f"El archivo '{excel_file}' ha sido importado a la base de datos '{sqlite_db}' en la tabla '{table_name}'.")
+# print(f"El archivo '{excel_file}' ha sido importado a la base de datos '{sqlite_db}' en la tabla '{table_name}'.")
 
-"""
-# Nombre del archivo SQLite y la tabla
+
+#Nombre del archivo SQLite y la tabla
 sqlite_db = 'database.db'
 table_name = 'velas'
+excel_file = 'velas3.xlsx'
 
 # Leer el archivo Excel
-df = pd.read_excel(excel_file, sheet_name=sheet_name)
+df = pd.read_excel(excel_file)
 
 # Conectar a la base de datos SQLite
 conn = sqlite3.connect(sqlite_db)
@@ -40,4 +41,3 @@ conn.commit()
 conn.close()
 
 print(f"El archivo '{excel_file}' ha sido importado a la base de datos '{sqlite_db}' en la tabla '{table_name}'.")
-"""

@@ -1,10 +1,11 @@
 import sqlite3
+import pandas as pd
 
-
-enf = 'Insomnio'
+enf = 'Estrés'
 conn = sqlite3.connect('database.db')
 c = conn.cursor()
-c.execute(f"SELECT * FROM pedidos")
+# print(pd.read_sql(f"SELECT * FROM velas", conn))
+c.execute(f"SELECT * FROM velas where enfermedad ='Respiración'")
 query = c.fetchall()
 conn.close()
 print(query)

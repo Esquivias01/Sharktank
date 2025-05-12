@@ -64,8 +64,8 @@
 
         <section id="veladoras-personalizadas" class="menu">
            
-           
-            <form action="http://127.0.0.1:5000/send_orden" method="post" class="p-4 border rounded shadow-sm bg-light">
+            
+            <form action="{{ url_for('send_orden') }}" method="post" class="p-4 border rounded shadow-sm bg-light">
                 
 
                 <label for="intencion">Elige tu intención:</label>
