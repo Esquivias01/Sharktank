@@ -186,16 +186,40 @@ header .navbar{
 
        
    /*FOOTER*/
+      
+   /*FOOTER*/
   footer {
-    background-color:var(--primary) ;
+    background: linear-gradient(to right, #1C1B1A, #165131);
     color: var(--cuarto);
     text-align: center;
     padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
-footer a {
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
     color: var(--tercero1);
-    text-decoration: none;
+    font-size: 24px;
+    transition: 0.3s ease;
 }
+
+.social-links a:hover {
+    color: var(--secondary);
+}
+
    
 
 
